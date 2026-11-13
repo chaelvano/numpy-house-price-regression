@@ -96,8 +96,15 @@ def make_shuffled_indices(n_samples, seed=42):
     # TODO: Create a reproducibly shuffled permutation of row indices.
     return np.random.default_rng(seed=seed).permutation(n_samples)
 
-# Step 11 - partition_indices (not yet solved)
-# TODO: implement
+# Step 11 - partition_indices
+def partition_indices(indices, train_ratio, val_ratio):
+    # TODO: Split a shuffled index array into train, validation, and test index arrays.
+    length = indices.shape[0]
+    
+    train_end = int(train_ratio * length)
+    val_end = train_end + int(val_ratio * length)
+
+    return (indices[:train_end], indices[train_end:val_end], indices[val_end:])
 
 # Step 12 - subset_xy (not yet solved)
 # TODO: implement
