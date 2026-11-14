@@ -109,8 +109,6 @@ def ols_predict(X, theta):
     return X @ theta
 
 # Step 15 - mean_absolute_error
-import numpy as np
-
 def mean_absolute_error(y_true, y_pred):
     # TODO: return the mean absolute error between targets and predictions
     return np.mean(np.abs(y_pred - y_true))
