@@ -73,8 +73,6 @@ def apply_standardizer(X, mean, std):
     return (X - mean) / std
 
 # Step 9 - add_bias_column
-import numpy as np
-
 def add_bias_column(X):
     # TODO: Prepend a column of ones to a 2-D feature matrix X...
     return np.column_stack((np.ones(X.shape[0]), X))
