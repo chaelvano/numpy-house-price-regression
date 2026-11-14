@@ -60,8 +60,6 @@ def one_hot_encode(labels):
     return encoded
 
 # Step 7 - fit_standardizer
-import numpy as np
-
 def fit_standardizer(X):
     # TODO: Compute per-column mean and std used to standardize features...
     mean = np.mean(X, axis=0)
