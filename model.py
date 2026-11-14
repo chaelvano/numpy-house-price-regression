@@ -50,8 +50,6 @@ def append_column(X, col):
     return np.column_stack((X, col))
 
 # Step 6 - one_hot_encode
-import numpy as np
-
 def one_hot_encode(labels):
     # TODO: Convert a 1-D array of categorical labels into a dense binary one-hot matrix.
     categories, inverse_idx = np.unique(labels, return_inverse=True)
