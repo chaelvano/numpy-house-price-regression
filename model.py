@@ -99,8 +99,6 @@ def subset_xy(X, y, indices):
     return X[indices], y[indices]
 
 # Step 13 - ols_fit
-import numpy as np
-
 def ols_fit(X, y):
     # TODO: return the ordinary-least-squares weight vector for a linear model.
     return np.linalg.lstsq(X, y)[0]
