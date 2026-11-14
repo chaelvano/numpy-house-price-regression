@@ -166,8 +166,14 @@ def prepare_cleaned_features(X, iqr_k=1.5):
 
     return X
 
-# Step 20 - assemble_feature_matrix (not yet solved)
-# TODO: implement
+# Step 20 - assemble_feature_matrix
+import numpy as np
+
+def assemble_feature_matrix(X_num, ratio_num_idx, ratio_den_idx, cat_labels=None):
+    # TODO: build an extended feature matrix by appending a derived ratio...
+    X_num = append_column(X_num, make_ratio_feature(X_num[:, ratio_num_idx], X_num[:, ratio_den_idx]))
+
+    return X_num if cat_labels is None else append_column(X_num, one_hot_encode(cat_labels))
 
 # Step 21 - make_train_val_test
 def make_train_val_test(X, y, train_ratio, val_ratio, seed):
