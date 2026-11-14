@@ -147,6 +147,8 @@ def residual_summary(y_true, y_pred):
     }
 
 # Step 19 - prepare_cleaned_features
+import numpy as np
+
 def prepare_cleaned_features(X, iqr_k=1.5):
     """Impute NaNs then IQR-clip columns to produce a clean numeric matrix.
 
